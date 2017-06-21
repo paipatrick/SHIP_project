@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Web Cell Segmentation and Cell-Scaffold Contact Verification</title>
+        <meta name="description" content="Web Cell Segmentation and Cell-Scaffold Contact Verification">
+
+  <link rel="icon"
+        href="https://isg.nist.gov/deepzoomweb/resources/img/favicon.ico;jsessionid=21CE77F2344B143AD8BF5B4A4F06CCA0"
+        type="image/x-icon">
+ 
+<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/reset.css" media="screen">
+<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/main_style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/layout.css" media="screen">
+<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/bootstrap.css">
+
+<!-- TODO : This script should be removed. 
+<script type="text/javascript" language="javascript" src="js/jquery/jquery.min.js"></script>
+-->
+<script type="text/javascript" language="javascript" src="libs/nist-layout/site.js"></script>
+
+<!-- TODO : This script should be removed. -->
+<script type="text/javascript" src="libs/nist-layout/holder.js"></script>
+
+
+</head>
+<body id="menu1">
+
+<div class="container">
+  <div class="row">
+    <a href="http://www.nist.gov/index.html"><img src="img/bg_header_gradient.png"
+                                                  alt="National Institute of Standards and Technology" width="970"/></a>
+
+    <div id="menuContainer">
+      <ul id="menu">
+        <li><a id="menu1nav" href="index.html">Home</a></li>
+		<li><a id="menu2nav" href="indexCell.html">Cell Segmentation</a></li>
+		<li><a id="menu4nav" href="pages/docs/onlineHelp.html">Help</a></li>
+      </ul>
+    </div>
+	
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+	<div class="col-xs-12">
+      <div class="row">
+
+        <h1>Web Cell Segmentation and Cell-Scaffold Contact Visual Verification</h1>
+		<h3> Description:</h3>
+        <p> This web verification system has been designed to perform visual verification of automated cell segmentation and 
+		cell-scaffold contact measurements from two-channel fluorescent confocal laser scanning microscopy 3D images (or z-stacks). 
+		</p>
+		
+		<h3> Solutions:</h3>       		
+		<p>
+		We facilitated visual verifications of  
+		<ul>
+			<li> <a id="cell" href="indexCell.html">3D z-stack segmentation of cells</a>, </li>
+			</li> 
+		</ul>
+		The web visual verification system has been tested with Mozilla Firefox, Google Chrome and Safari browsers. The choice of gamma correction for scaffold intensities has been supported by the visual inspection of the samples presented <a id="cell" href="pages/docs/gammaCorrection.html">here.</a>
+		</p>
+		The methods for conveying 3D information are (1) three orthogonal views of max intensity projections (cell segmentation) and (2) a set of color movies with animated rotations of color-encoded objects (cell-scaffold contact points). Examples are shown below.
+				<br>
+		              <figure>
+                            <img src="img/Pos024_S001_projections.jpeg" width="auto" height="320px" alt="ortho projections" />
+							<BR>
+							<video id="sampleMovie" width="320" height="320" preload="auto" controls="true">
+								<source src="img/070515_MMF_1_63x_Pos001_OutF10_YSCP.mp4" type="video/mp4">
+								Your browser does not support HTML5 video.	
+								</source>
+							</video>		
+							<video id="sampleMovie" width="320" height="320" preload="auto" controls="true">
+								<source src="img/070515_MMF_1_63x_Pos001_OutF10_XSCP.mp4" type="video/mp4">
+								Your browser does not support HTML5 video.	
+								</source>
+							</video>	
+                            <figcaption>
+                                Top: three orthogonal max intensity projections of the 3D volume stained for cell membrane (left) and its automated segmentation (right).
+								<BR>
+								Bottom: two color movies with animated rotations around X and Y axes that contain cell (red), scaffold (green) and contact points (blue) and are rendered using alpha blending.
+                            </figcaption>
+                        </figure>
+						
+						
+	<br>
+	
+		
+		<h3> Motivation:</h3>        
+		<p>
+		The motivation behind this web system is to assist biological studies that acquire large collections of 3D z-stacks and focus on 3D shape measurements. In such studies, automated software-based measurements are necessary to handle the amount of work due to the sheer size of collected z-stacks and visual inspections of measurements are needed to verify the quality of automated measurements.
+		</p>
+		
+		<h3> Challenges:</h3>      
+		<p>
+		Visual verification becomes challenging when 	
+		<dd><ul>  
+		<li>3D shape information has to be inspected from multiple angles using 2D displays,</li>
+		<li>the information about 3D cell-scaffold contacts has to be evaluated with respect to two channels simultaneously </li>
+		<li>the number of pairs of cell and scaffold z-stacks is several hundred (between 420 and 708 in our case),</li>
+		<li>the entire byte size of 3D z-stacks reaches one terabyte,</li>		
+		<li>the expertise needed to verify the measurements is geographically distributed, and</li>
+		<li>the visual verification has to be performed consistently across multiple experts, and impose reasonable demands on them in terms of their training and inspection time, as well as user interfaces. </li>	
+		</ul></dd>	
+		</p>
+
+		
+      </div>     
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer Starts-->
+<div class="container">
+  <div class="row footer">
+    <div class="col-xs-12">
+      <p>
+        The National Institute of Standards and Technology (NIST) is
+        an agency of the
+        <a href="http://commerce.gov">U.S. Department of Commerce</a>.
+      </p>
+
+      <p>
+        <a href="http://nist.gov/public_affairs/privacy.cfm">
+          Privacy policy / security notice / accessibility statement</a>
+        /
+        <a href="http://nist.gov/public_affairs/disclaimer.cfm">
+          Disclaimer</a>
+        /
+        <a href="http://nist.gov/director/foia/">
+          Freedom of Information Act (FOIA)</a>
+        /
+        <a href="http://nist.gov/director/civil/nofearpolicy.cfm">
+          No Fear Act Policy</a>
+        /
+        <a href="http://nist.gov/director/quality_standards.cfm">
+          NIST Information Quality Standards</a>
+        /
+        <a href="http://nist.gov/public_affairs/envpolicy.cfm">
+          Environmental Policy Statement</a>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12"><strong>Date created:</strong> September 23, 2016 | <strong>Last
+      updated:</strong>
+      <script type="text/javascript">
+        if(document.lastModified != 'undefined') { document.write(format_date_mmmddyy(document.lastModified)); }
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Ends-->
+
+
+   <script src="../../libs/nist-layout/analytics.js" async=""></script>
+             
+	 <script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-45172783-4', 'nist.gov');
+		ga('send', 'pageview');
+	</script>
+
+</body>
+</html>
+
