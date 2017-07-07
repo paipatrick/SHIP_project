@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Web Cell Segmentation and Cell-Scaffold Contact Verification</title>
-        <meta name="description" content="Web Cell Segmentation and Cell-Scaffold Contact Verification">
+	<!-- google -->
+	<meta name="google-signin-client_id" content="741055934806-20ii9alv5fa6rnk8cp7qqmce8sntt06j.apps.googleusercontent.com">
 
-  <link rel="icon"
-        href="https://isg.nist.gov/deepzoomweb/resources/img/favicon.ico;jsessionid=21CE77F2344B143AD8BF5B4A4F06CCA0"
-        type="image/x-icon">
+	<!-- stop -->
+  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  	<title>Web Cell Segmentation and Cell-Scaffold Contact Verification</title>
+    <meta name="description" content="Web Cell Segmentation and Cell-Scaffold Contact Verification">
+
+  	<link rel="icon" href="https://isg.nist.gov/deepzoomweb/resources/img/favicon.ico;jsessionid=21CE77F2344B143AD8BF5B4A4F06CCA0" type="image/x-icon">
  
-<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/reset.css" media="screen">
-<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/main_style.css" media="screen">
-<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/layout.css" media="screen">
-<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/reset.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/main_style.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/layout.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="libs/nist-layout/css/bootstrap.css">
 
-<!-- TODO : This script should be removed. 
-<script type="text/javascript" language="javascript" src="js/jquery/jquery.min.js"></script>
--->
-<script type="text/javascript" language="javascript" src="libs/nist-layout/site.js"></script>
+	<!-- TODO : This script should be removed. 
+	<script type="text/javascript" language="javascript" src="js/jquery/jquery.min.js"></script>
+	-->
+	<script type="text/javascript" language="javascript" src="libs/nist-layout/site.js"></script>
 
-<!-- TODO : This script should be removed. -->
-<script type="text/javascript" src="libs/nist-layout/holder.js"></script>
-
+	<!-- TODO : This script should be removed. -->
+	<script type="text/javascript" src="libs/nist-layout/holder.js"></script>
 
 </head>
+
 <body id="menu1">
 
 <div class="container">
   <div class="row">
-    <a href="http://www.nist.gov/index.html"><img src="img/bg_header_gradient.png"
-                                                  alt="National Institute of Standards and Technology" width="970"/></a>
+    <a href="http://www.nist.gov/index.html"><img src="img/bg_header_gradient.png" alt="National Institute of Standards and Technology" width="970"/></a>
 
     <div id="menuContainer">
       <ul id="menu">
@@ -46,6 +47,57 @@
   <div class="row">
 	<div class="col-xs-12">
       <div class="row">
+
+      	<script src="https://apis.google.com/js/platform.js" async defer></script>
+      	<head>
+			<meta name="google-signin-client_id" content="741055934806-20ii9alv5fa6rnk8cp7qqmce8sntt06j.apps.googleusercontent.com">
+		</head>
+
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+		<script>
+			function onSignIn(googleUser) {
+				var profile = googleUser.getBasicProfile();
+				console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+				console.log('Name: ' + profile.getName());
+				console.log('Image URL: ' + profile.getImageUrl());
+				console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+				// The ID token you need to pass to your backend:
+		        var id_token = googleUser.getAuthResponse().id_token;
+		        console.log("ID Token: " + id_token);
+
+		        var mysql = require("mysql");
+
+				console.log("before connection");
+
+				var connection = mysql.createConnection({
+					host: "localhost",
+					user: "root",
+					password: "password",
+					database: "hr",
+					port: 3306
+				})
+
+				connection.connect();
+				
+				connection.query("SELECT * FROM form");
+				
+				window.alert("app is running");
+
+				window.location = "../app/indexCell.html#/validationSpunCoat06252015";
+			}
+		</script>
+
+		<a href="#" onclick="signOut();">Sign out</a>
+		<script>
+		  function signOut() {
+		    var auth2 = gapi.auth2.getAuthInstance();
+		    auth2.signOut().then(function () {
+		      console.log('User signed out.');
+		    });
+		  }
+		</script>
 
         <h1>Web Cell Segmentation and Cell-Scaffold Contact Visual Verification</h1>
 		<h3> Description:</h3>
@@ -159,7 +211,7 @@
 <!-- Footer Ends-->
 
 
-   <script src="../../libs/nist-layout/analytics.js" async=""></script>
+   <script src="libs/nist-layout/analytics.js" async=""></script>
              
 	 <script>
 		(function(i, s, o, g, r, a, m) {

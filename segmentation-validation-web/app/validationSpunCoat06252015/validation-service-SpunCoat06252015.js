@@ -8,470 +8,315 @@
 
     function validationServiceSpunCoat06252015($rootScope, $q) {
         var service = {
-            getSpunCoat06252015 : getSpunCoat06252015,
+        	getQuestion1 : getQuestion1,
+        	getQuestion2 : getQuestion2,
+        	getQuestion3 : getQuestion3,
+        	getQuestion4 : getQuestion4,
+        	getSpunCoat06252015_1 : getSpunCoat06252015_1,
+        	getSpunCoat06252015_2 : getSpunCoat06252015_2,
+            getSpunCoat06252015_3 : getSpunCoat06252015_3,
+            getSpunCoat06252015_4 : getSpunCoat06252015_4,
+            getSpunCoat06252015_5 : getSpunCoat06252015_5,
         };
         return service;
 
-        function getSpunCoat06252015() {
+        function getQuestion1() {
         	var data = {
-	        	size: 91,
+	        	size: 5,
+	        	name: "Questions",
+	    		currentQuestion: 0,
+	    		segmentations: [
+{
+	question: "q1?",
+	response1: "q1Response 1",
+	response2: "q1Response 2",
+	response3: "q1Response 3",
+	response4: "q1Response 4"
+},
+{
+	question: "q5?",
+	response1: "q5Response 1",
+	response2: "q5Response 2",
+	response3: "q5Response 3",
+	response4: "q5Response 4"
+},
+{
+	question: "q9?",
+	response1: "q9Response 1",
+	response2: "q9Response 2",
+	response3: "q9Response 3",
+	response4: "q9Response 4"
+},
+{
+	question: "q13?",
+	response1: "q13Response 1",
+	response2: "q13Response 2",
+	response3: "q13Response 3",
+	response4: "q13Response 4"
+},
+{
+	question: "q17?",
+	response1: "q17Response 1",
+	response2: "q17Response 2",
+	response3: "q17Response 3",
+	response4: "q17Response 4"
+}]        	}
+        	return data;
+        }
+
+        function getQuestion2() {
+        	var data = {
+	        	size: 5,
+	        	name: "Questions",
+	    		currentQuestion: 0,
+	    		segmentations: [
+{
+	question: "q2?",
+	response1: "q2Response 1",
+	response2: "q2Response 2",
+	response3: "q2Response 3",
+	response4: "q2Response 4"
+},
+{
+	question: "q6?",
+	response1: "q6Response 1",
+	response2: "q6Response 2",
+	response3: "q6Response 3",
+	response4: "q6Response 4"
+},
+{
+	question: "q10?",
+	response1: "q10Response 1",
+	response2: "q10Response 2",
+	response3: "q10Response 3",
+	response4: "q10Response 4"
+},
+{
+	question: "q14?",
+	response1: "q14Response 1",
+	response2: "q14Response 2",
+	response3: "q14Response 3",
+	response4: "q14Response 4"
+},
+{
+	question: "q18?",
+	response1: "q18Response 1",
+	response2: "q18Response 2",
+	response3: "q18Response 3",
+	response4: "q18Response 4"
+}]        	}
+        	return data;
+        }
+
+        function getQuestion3() {
+        	var data = {
+	        	size: 5,
+	        	name: "Questions",
+	    		currentQuestion: 0,
+	    		segmentations: [
+{
+	question: "q3?",
+	response1: "q3Response 1",
+	response2: "q3Response 2",
+	response3: "q3Response 3",
+	response4: "q3Response 4"
+},
+{
+	question: "q7?",
+	response1: "q7Response 1",
+	response2: "q7Response 2",
+	response3: "q7Response 3",
+	response4: "q7Response 4"
+},
+{
+	question: "q11?",
+	response1: "q11Response 1",
+	response2: "q11Response 2",
+	response3: "q11Response 3",
+	response4: "q11Response 4"
+},
+{
+	question: "q15?",
+	response1: "q15Response 1",
+	response2: "q15Response 2",
+	response3: "q15Response 3",
+	response4: "q15Response 4"
+},
+{
+	question: "q19?",
+	response1: "q19Response 1",
+	response2: "q19Response 2",
+	response3: "q19Response 3",
+	response4: "q19Response 4"
+}]        	}
+        	return data;
+        }
+
+        function getQuestion4() {
+        	var data = {
+	        	size: 5,
+	        	name: "Questions",
+	    		currentQuestion: 0,
+	    		segmentations: [
+{
+	question: "q4?",
+	response1: "q4Response 1",
+	response2: "q4Response 2",
+	response3: "q4Response 3",
+	response4: "q4Response 4"
+},
+{
+	question: "q8?",
+	response1: "q8Response 1",
+	response2: "q8Response 2",
+	response3: "q8Response 3",
+	response4: "q8Response 4"
+},
+{
+	question: "q12?",
+	response1: "q12Response 1",
+	response2: "q12Response 2",
+	response3: "q12Response 3",
+	response4: "q12Response 4"
+},
+{
+	question: "q8?",
+	response1: "q16Response 1",
+	response2: "q16Response 2",
+	response3: "q16Response 3",
+	response4: "q16Response 4"
+},
+{
+	question: "q20?",
+	response1: "q20Response 1",
+	response2: "q20Response 2",
+	response3: "q20Response 3",
+	response4: "q20Response 4"
+}]        	}
+        	return data;
+        }
+
+        function getSpunCoat06252015_1() {
+        	var data = {
+	        	size: 2,
 	        	name: "SpunCoat06252015",
 	    		currentImage: 0,
 	    		segmentations: [
 {
-	name: "061115_SC_1_63x_Pos045",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos045_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos046",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos046_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos047",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos047_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos048",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos048_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos049",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos049_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos050",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos050_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos051",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos051_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos052",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos052_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos053",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos053_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos054",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos054_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos055",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos055_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos057",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos057_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos058",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos058_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos059",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos059_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos061",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos061_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos063",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos063_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos064",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos064_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos065",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos065_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos066",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos066_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos068",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos068_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos069",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos069_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos071",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos071_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos073",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos073_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos074",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos074_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos075",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos075_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos078",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos078_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos079",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos079_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos080",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos080_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos082",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos082_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos083",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos083_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos084",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos084_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos085",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos085_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos086",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos086_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos087",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos087_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos088",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos088_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos089",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos089_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos090",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos090_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos091",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos091_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos092",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos092_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos093",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos093_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos094",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos094_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos101",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos101_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos102",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos102_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos103",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos103_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos104",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos104_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos105",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos105_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos106",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos106_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos110",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos110_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos111",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos111_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos112",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos112_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos113",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos113_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos114",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos114_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos115",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos115_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos116",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos116_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos117",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos117_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos118",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos118_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos119",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos119_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos121",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos121_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos122",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos122_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos123",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos123_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos124",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos124_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos126",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos126_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos127",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos127_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos128",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos128_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos129",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos129_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos130",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos130_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos131",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos131_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos132",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos132_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos133",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos133_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos134",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos134_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos135",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos135_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos136",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos136_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos137",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos137_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos138",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos138_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos139",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos139_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos140",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos140_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos141",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos141_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos142",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos142_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos143",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos143_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos144",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos144_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos145",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos145_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos147",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos147_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos148",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos148_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos149",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos149_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos150",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos150_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos153",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos153_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos156",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos156_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos158",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos158_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos159",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos159_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos160",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos160_projections.jpeg",
-	status: "good"
-},
-{
-	name: "061115_SC_1_63x_Pos161",
-	path: "data/SpunCoat-06252015/061115_SC_1_63x_Pos161_projections.jpeg",
-	status: "good"
+	name: "del_1_56831106_21",
+	path: "data/SpunCoat-06252015/250bp_HG2_10X_SVrefine10Xhap1_167_del_1_56831106_21.jpg",
+	status_q1: "unanswered",
+	status_q2: "unanswered",
+	status_q3: "unanswered",
+	status_q4: "unanswered",
+	status_q5: "unanswered",
+	status_q6: "unanswered",
+	status_q7: "unanswered",
+	status_q8: "unanswered",
+	status_q9: "unanswered",
+	status_q10: "unanswered",
+	status_q11: "unanswered",
+	status_q12: "unanswered",
+	status_q13: "unanswered",
+	status_q14: "unanswered",
+	status_q15: "unanswered",
+	status_q16: "unanswered",
+	status_q17: "unanswered",
+	status_q18: "unanswered",
+	status_q19: "unanswered",
+	status_q20: "unanswered"
+},
+{
+	name: "ins_9_108906616_13.jpg",
+	path: "data/SpunCoat-06252015/250bp_ins_9_108906616_13.jpg",
+	status_q1: "unanswered",
+	status_q2: "unanswered",
+	status_q3: "unanswered",
+	status_q4: "unanswered",
+	status_q5: "unanswered",
+	status_q6: "unanswered",
+	status_q7: "unanswered",
+	status_q8: "unanswered",
+	status_q9: "unanswered",
+	status_q10: "unanswered",
+	status_q11: "unanswered",
+	status_q12: "unanswered",
+	status_q13: "unanswered",
+	status_q14: "unanswered",
+	status_q15: "unanswered",
+	status_q16: "unanswered",
+	status_q17: "unanswered",
+	status_q18: "unanswered",
+	status_q19: "unanswered",
+	status_q20: "unanswered"
+}]        	}
+        	return data;
+        }
+
+        function getSpunCoat06252015_2() {
+        	var data = {
+	        	size: 2,
+	        	name: "SpunCoat06252015",
+	    		currentImage: 0,
+	    		segmentations: [
+{
+	name: "del_1_56831106_21",
+	path: "data/SpunCoat-06252015/pacbio_HG2_10X_SVrefine10Xhap1_167_del_1_56831106_21.jpg"
+},
+{
+	name: "ins_9_108906616_13.jpg",
+	path: "data/SpunCoat-06252015/pacbio_ins_9_108906616_13.jpg"
+}]        	}
+        	return data;
+        }
+
+        function getSpunCoat06252015_3() {
+        	var data = {
+	        	size: 2,
+	        	name: "SpunCoat06252015",
+	    		currentImage: 0,
+	    		segmentations: [
+{
+	name: "del_1_56831106_21",
+	path: "data/SpunCoat-06252015/10x_HG2_10X_SVrefine10Xhap1_167_del_1_56831106_21.jpg"
+},
+{
+	name: "ins_9_108906616_13.jpg",
+	path: "data/SpunCoat-06252015/10x_ins_9_108906616_13.jpg"
+}]        	}
+        	return data;
+        }
+
+        function getSpunCoat06252015_4() {
+        	var data = {
+	        	size: 2,
+	        	name: "SpunCoat06252015",
+	    		currentImage: 0,
+	    		segmentations: [
+{
+	name: "del_1_56831106_21",
+	path: "data/SpunCoat-06252015/300x_HG2_10X_SVrefine10Xhap1_167_del_1_56831106_21.jpg"
+},
+{
+	name: "ins_9_108906616_13.jpg",
+	path: "data/SpunCoat-06252015/300x_ins_9_108906616_13.jpg"
+}]        	}
+        	return data;
+        }
+
+        function getSpunCoat06252015_5() {
+        	var data = {
+	        	size: 2,
+	        	name: "SpunCoat06252015",
+	    		currentImage: 0,
+	    		segmentations: [
+{
+	name: "del_1_56831106_21",
+	path: "data/SpunCoat-06252015/mp_HG2_10X_SVrefine10Xhap1_167_del_1_56831106_21.jpg"
+},
+{
+	name: "ins_9_108906616_13",
+	path: "data/SpunCoat-06252015/mp_ins_9_108906616_13.jpg"
 }]        	}
         	return data;
         }

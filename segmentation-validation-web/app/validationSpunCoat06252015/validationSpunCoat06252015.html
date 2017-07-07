@@ -1,102 +1,262 @@
+<!-- easyzoom -->
 
+	<!-- <link rel="stylesheet" href="validationSpunCoat06252015/easyzoom.css"/> -->
+
+<!-- 	<div class="easyzoom easyzoom--overlay">
+		<a href="validationSpunCoat06252015/1_zoom.jpg">
+			<img src="validationSpunCoat06252015/1_standard.jpg" alt="" width="640" height="360" />
+		</a>
+	</div>
+
+	<script>
+		alert("test");
+		var $easyzoom = $('.easyzoom').easyZoom();
+	</script> -->
+
+<style type="text/css">
+    .carousel{
+        /*margin-top: 20px;*/
+    }
+
+    .carousel .item{
+        min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+    }
+
+    .carousel .item img{
+        margin: 0 auto; /* Align slide image horizontally center */
+    }
+
+    .carousel .carousel-control{ 
+    	visibility: hidden;
+    }
+    
+	.carousel:hover .carousel-control{ 
+		visibility: visible;
+	}
+
+	ol.carousel-indicators li.active {
+  		background: #387AB6;
+	}
+</style>
+
+<!-- stop -->
 <div ng-controller="ValidationSpunCoat06252015Ctrl" class="container">
+
 <div class="row">
-<div class="row">
+	<div class="row">
 		<h1>Cell segmentation verification - Dataset Spun Coat 06252015</h1>
 	</div>
 </div>
-	
 
 	<div class="row">
+
+	<!-- left side before row -->
+	<div style="float:left; width:50%; padding-right: 2%;">
+
+		<div style="margin-bottom:2.5%;">
+
+		<label>Variant: </label> <a href = "#">{{currentViewSpunCoat06252015.name}}</a>
+
+		<button type="submit" class="btn btn-default btn-sm" ng-click="previous('currentViewSpunCoat06252015', 'spuncoat06252015'); previous('currentViewSpunCoat06252015_2', 'spuncoat06252015_2'); previous('currentViewSpunCoat06252015_3', 'spuncoat06252015_3'); previous('currentViewSpunCoat06252015_4', 'spuncoat06252015_4'); previous('currentViewSpunCoat06252015_5', 'spuncoat06252015_5');" ng-disabled="currentViewSpunCoat06252015.index==0" style="color: gray; margin-left: 5%; margin-right:2.5%;"> <
+		</button>
+
+		<button type="submit" class="btn btn-default btn-sm" ng-click="next('currentViewSpunCoat06252015', 'spuncoat06252015'); next('currentViewSpunCoat06252015_2', 'spuncoat06252015_2'); next('currentViewSpunCoat06252015_3', 'spuncoat06252015_3'); next('currentViewSpunCoat06252015_4', 'spuncoat06252015_4'); next('currentViewSpunCoat06252015_5', 'spuncoat06252015_5');" ng-disabled="currentViewSpunCoat06252015.index==(spuncoat06252015.size-1)" style="color: gray; margin-left: 2.5%;"> >
+	    </button>
+
+	    </div>
+
 		<progressbar value="currentViewSpunCoat06252015.index+1" max="spuncoat06252015.size">
 			<i>{{currentViewSpunCoat06252015.index + 1}} / {{spuncoat06252015.size}}</i>
 		</progressbar>
-		
-	</div>
 
-	<div class="row">
-		<label>Stack name: </label> {{currentViewSpunCoat06252015.name}}
-		<div class="row">
-			<button type="submit" class="btn btn-default btn-lg" ng-click="previous();"
-			ng-disabled="currentViewSpunCoat06252015.index==0" >
-	            Previous
-	        </button>
-			
-			<img ng-src="{{currentViewSpunCoat06252015.path}}" style="max-width:70%; height:auto;" />
-			
-	        <button type="submit" class="btn btn-default btn-lg" ng-click="next();"
-	                ng-disabled="currentViewSpunCoat06252015.index==(spuncoat06252015.size-1)" >
-	            Next
-	        </button>
-		</div>
-		<div class="row">
-			<h1>How would you classify this segmentation?</h1>
-		</div>
-		<div class="row">
-	        <button type="submit" class="btn btn-default btn-lg" ng-click="pressGood();"
-	        ng-class="spuncoat06252015.segmentations[currentViewSpunCoat06252015.index].status=='good' ? 'btn btn-primary btn-lg' : 
-	        'btn btn-default btn-lg'"
-	        tooltip-placement="right" tooltip="Visually, the shape is accurate (at least 90%) and close to perfect, this segmentation is valid."
-	                ng-disabled="(validationForm.$dirty && validationForm.$invalid) ||
-	                    validationForm.$pristine">
-	            Good
-	        </button>
-	        
-	        <button type="submit" class="btn btn-default btn-lg" ng-click="pressCorrect();"
-	        ng-class="spuncoat06252015.segmentations[currentViewSpunCoat06252015.index].status=='correct' ? 'btn btn-primary btn-lg' : 
-	        'btn btn-default btn-lg'"
-	        tooltip-placement="right" tooltip="Visually, the shape is accurate (at least 75%), but some small parts can be over or under segmented, this segmentation is valid."
-	                ng-disabled="(validationForm.$dirty && validationForm.$invalid) ||
-	                    validationForm.$pristine">
-	            Correct
-	        </button>
-	        
-	        <button type="submit" class="btn btn-default btn-lg" ng-click="pressInaccurate();"
-	        ng-class="spuncoat06252015.segmentations[currentViewSpunCoat06252015.index].status=='inaccurate' ? 'btn btn-primary btn-lg' : 
-	        'btn btn-default btn-lg'"
-	        tooltip-placement="right" tooltip="The shape is not accurate enough (less than 75%), this segmentation should be discarded."
-	                ng-disabled="(validationForm.$dirty && validationForm.$invalid) ||
-	                    validationForm.$pristine">
-	            Inaccurate
-	        </button>
-	        
-	        <button type="submit" class="btn btn-default btn-lg" ng-click="pressMissed();"
-	        ng-class="spuncoat06252015.segmentations[currentViewSpunCoat06252015.index].status=='missed' ? 'btn btn-primary btn-lg' : 
-	        'btn btn-default btn-lg'"
-	        tooltip-placement="right" tooltip="The segmented object is not the cell of interest, this segmentation should be discarded."
-	                ng-disabled="(validationForm.$dirty && validationForm.$invalid) ||
-	                    validationForm.$pristine">
-	            Missed
-	        </button>
+		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+
+	        <div class="carousel-inner" style="width:100%; height:500px">
+	            <div class="item active">
+	                <img ng-src="{{currentViewSpunCoat06252015.path}}" style="float:left; max-height:32.3%; width:49%; border:1px solid gray; margin-right: 1%; margin-bottom: 1%;">
+
+	                <img ng-src="{{currentViewSpunCoat06252015_2.path}}" style="float:right; max-height:49%; width:49%; border:1px solid gray; margin-left: 1%; margin-bottom: 1%;">
+	                
+	                <img ng-src="{{currentViewSpunCoat06252015_3.path}}" style="float:left; max-height:32.3%; width:49%; border:1px solid gray; margin-top: 1%; margin-right: 1%; padding-bottom: 1%;">
+
+	                <img ng-src="{{currentViewSpunCoat06252015_4.path}}" style="float:right; max-height:49%; width:49%; border: 1px solid gray; margin-top: 1%; margin-left: 1%;">
+	                
+	                <img ng-src="{{currentViewSpunCoat06252015_5.path}}" style="float:left; max-height:32.3%; width:49%; border:1px solid gray; margin-top: 1%; margin-right:1%;">
+	            </div>
+	            <div class="item">
+	                <img ng-src="{{currentViewSpunCoat06252015.path}}" style="max-width:100%; max-height:100%;">
+	            </div>
+	            <div class="item">
+	                <img ng-src="{{currentViewSpunCoat06252015_2.path}}" style="max-width:100%; max-height:100%;">
+	            </div>
+	            <div class="item">
+	                <img ng-src="{{currentViewSpunCoat06252015_3.path}}" style="max-width:100%; max-height:100%;">
+	            </div>
+	            <div class="item">
+	                <img ng-src="{{currentViewSpunCoat06252015_4.path}}" style="max-width:100%; max-height:100%;">
+	            </div>
+	            <div class="item">
+	                <img ng-src="{{currentViewSpunCoat06252015_5.path}}" style="max-width:100%; max-height:100%;">
+	            </div>
+	        </div>
+
+	        <!-- controls -->
+	        <a ng-non-bindable class="carousel-control left" href="#carousel" data-slide="prev" style="background-image:none;">
+	            <span class="glyphicon glyphicon-chevron-left" style="color:#387AB6;"></span>
+	        </a>
+	        <a ng-non-bindable class="carousel-control right" href="#carousel" data-slide="next" style="background-image:none;">
+	            <span class="glyphicon glyphicon-chevron-right" style="color:#387AB6;"></span>
+	        </a>
+
+	        <ol class="carousel-indicators" style="bottom:-50px;">
+
+	            <li data-target="#carousel" data-slide-to="0" class="active" style="list-style-position:inside; border:1px solid gray;"></li>
+	            <li data-target="#carousel" data-slide-to="1" style="list-style-position:inside; border:1px solid gray;"></li>
+	            <li data-target="#carousel" data-slide-to="2" style="list-style-position:inside; border:1px solid gray;"></li>
+	            <li data-target="#carousel" data-slide-to="3" style="list-style-position:inside; border:1px solid gray;"></li>
+	            <li data-target="#carousel" data-slide-to="4" style="list-style-position:inside; border:1px solid gray;"></li>
+	            <li data-target="#carousel" data-slide-to="5" style="list-style-position:inside; border:1px solid gray;"></li>
+	        </ol>
+
 	    </div>
         
-        <br/>
-        <div class="row">
-			<label>Current classification: {{spuncoat06252015.segmentations[currentViewSpunCoat06252015.index].status}}</label>
+  	</div>
+
+  	<!-- right side before responses -->
+  	<div style="float:left; width:50%; padding-left: 2%;">
+
+  		<div class="row" style="display:flex; align-items:center; margin:0;">
+
+  			<h4 style="color:gray;">Q: {{currentViewGetQuestion1.index + 1}} / {{getquestion1.size}}</h4>
+
+		        <button type="submit" class="btn btn-default btn-sm" ng-click="previousQuestion('currentViewGetQuestion1', 'getquestion1'); previousQuestion('currentViewGetQuestion2', 'getquestion2');
+		        previousQuestion('currentViewGetQuestion3', 'getquestion3');
+		        previousQuestion('currentViewGetQuestion4', 'getquestion4');" ng-disabled="currentViewGetQuestion1.index==0" style="color:gray; margin-left: 5%; margin-right:2.5%;"> <
+				</button>
+
+				<button type="submit" class="btn btn-default btn-sm" ng-click="nextQuestion('currentViewGetQuestion1', 'getquestion1', 'q1'); nextQuestion('currentViewGetQuestion2', 'getquestion2', 'q2');
+				nextQuestion('currentViewGetQuestion3', 'getquestion3', 'q3');
+				nextQuestion('currentViewGetQuestion4', 'getquestion4', 'q4');" ng-disabled="currentViewGetQuestion1.index==(getquestion1.size-1)" style="color: gray; margin-left:2.5%;"> >
+				</button>
+
 		</div>
-        
-        <div class="row">
-			<h1>Your classification for this dataset</h1>
+
+		<div class="row" style="display:flex; align-items:center; margin:0;">
+
+			<div style="width:50%; float:left;">
+
+				<h3>{{currentViewGetQuestion1.question}}</h3>
+
+				<div class="radio">
+					<label><input type="radio" name="q1" ng-click="pressResponse('currentViewGetQuestion1', 'Response1');">{{currentViewGetQuestion1.response1}}</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="q1" ng-click="pressResponse('currentViewGetQuestion1', 'Response2');">{{currentViewGetQuestion1.response2}}</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="q1" ng-click="pressResponse('currentViewGetQuestion1', 'Response3');">{{currentViewGetQuestion1.response3}}</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="q1" ng-click="pressResponse('currentViewGetQuestion1', 'Response4');">{{currentViewGetQuestion1.response4}}</label>
+				</div>
+
+			</div>
+
+			<div style="width:50%; float:left;">
+
+				<h3>{{currentViewGetQuestion2.question}}</h3>
+
+				<div class="radio">
+					<label><input type="radio" name="q2" ng-click="pressResponse('currentViewGetQuestion2', 'Response1');">{{currentViewGetQuestion2.response1}}</label>
+					</div>
+				<div class="radio">
+					<label><input type="radio" name="q2" ng-click="pressResponse('currentViewGetQuestion2', 'Response2');">{{currentViewGetQuestion2.response2}}</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="q2" ng-click="pressResponse('currentViewGetQuestion2', 'Response3');">{{currentViewGetQuestion2.response3}}</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="q2" ng-click="pressResponse('currentViewGetQuestion2', 'Response4');">{{currentViewGetQuestion2.response4}}</label>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row" style="display:flex; align-items:center; margin:0;">
+
+			<div style="width:50%; float:left;">
+
+				<div style="margin-left: :20%;">
+					<h3>{{currentViewGetQuestion3.question}}</h3>
+
+					<div class="radio">
+						<label><input type="radio" name="q3" ng-click="pressResponse('currentViewGetQuestion3', 'Response1');">{{currentViewGetQuestion3.response1}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="q3" ng-click="pressResponse('currentViewGetQuestion3', 'Response2');">{{currentViewGetQuestion3.response2}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="q3" ng-click="pressResponse('currentViewGetQuestion3', 'Response3');">{{currentViewGetQuestion3.response3}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="q3" ng-click="pressResponse('currentViewGetQuestion3', 'Response4');">{{currentViewGetQuestion3.response4}}</label>
+					</div>
+				</div>
+			</div>
+
+			<div style="width:50%; float:left;">
+
+				<div style="margin-left: :20%;">
+
+					<h3>{{currentViewGetQuestion4.question}}</h3>
+
+					<div class="radio">
+						<label><input type="radio" name="q4" ng-click="pressResponse('currentViewGetQuestion4', 'Response1');">{{currentViewGetQuestion4.response1}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="q4" ng-click="pressResponse('currentViewGetQuestion4', 'Response2');">{{currentViewGetQuestion4.response2}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="q4" ng-click="pressResponse('currentViewGetQuestion4', 'Response3');">{{currentViewGetQuestion4.response3}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="q4" ng-click="pressResponse('currentViewGetQuestion4', 'Response4');">{{currentViewGetQuestion4.response4}}</label>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	<div class="row" style="margin:0;">
+  		<div class="row">
+			<h1>Responses</h1>
 		</div>
 		<div class="row">
 			<a id="downloadbtn" href ="" class="btn btn-default btn-lg" ng-click="pressDownloadCsv();"
                 >
-            Download the CSV file
+            Download CSV
         </a>
-        
+         <button class="btn btn-default btn-lg" ng-click="displayCsv = !displayCsv">Display Responses</button>
 		</div>
-        <br/>
+
         <div class="row">
-	        <button class="btn btn-default btn-lg" ng-click="displayCsv = !displayCsv">Display CSV below</button>
-			<hr>
+
+        	<br>
+
 			<div collapse="displayCsv">
-				<div 
-					ng-repeat="segmentation in spuncoat06252015.segmentations">
-					{{segmentation.name}},{{segmentation.status}}
+				<div ng-repeat="segmentation in spuncoat06252015.segmentations" style="width:100%; word-wrap: break-word;">
+					{{segmentation.name}},{{segmentation.status_q1}},{{segmentation.status_q2}},{{segmentation.status_q3}},{{segmentation.status_q4}},{{segmentation.status_q5}},{{segmentation.status_q6}},{{segmentation.status_q7}},{{segmentation.status_q8}},{{segmentation.status_q9}},{{segmentation.status_q10}},{{segmentation.status_q11}},{{segmentation.status_q12}},{{segmentation.status_q13}},{{segmentation.status_q14}},{{segmentation.status_q15}},{{segmentation.status_q16}},{{segmentation.status_q17}},{{segmentation.status_q18}},{{segmentation.status_q19}},{{segmentation.status_q20}}
 				</div>
 			</div>
+
 		</div>
+	</div>
+
   	</div>
+
+  	</div>
+
 </div>
-
-
